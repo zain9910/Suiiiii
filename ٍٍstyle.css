@@ -1,0 +1,132 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background: linear-gradient(#111, #222);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+body::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 0, 0, 0.849);
+    position: absolute;
+    z-index: -1;
+    clip-path: circle(33% at right 60%);
+}
+
+.contener {
+    height: 80%;
+    width: 80%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 80%;
+    margin: auto;
+}
+
+nav .ni {
+    color: whitesmoke;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 50px;
+    letter-spacing: 4px;
+    font-weight: 550;
+    transition: 1s;
+    position: absolute;
+    top: 30px; 
+    left: 40px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 6px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-weight: 550;
+    transition: font-size 0.7s;
+}
+
+nav ul li a:hover {
+    color: rgb(0, 255, 98);
+    font-size: 35px;
+}
+
+nav .ni:hover {
+    font-size: 70px;
+    color: rgb(250, 5, 189);
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 80%;
+    margin: auto;
+    position: relative;
+}
+
+.content .text {
+    width: 50%;
+    position: relative; 
+    bottom: 70px;
+}
+
+.content .text h1 {
+    color: rgb(51, 230, 243);
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: 795;
+    letter-spacing: 2.5px;
+}
+
+.content .text p {
+    color: bisque;
+    font-size: 15px;
+    line-height: 22px;
+    margin: 10px 0;
+    letter-spacing: 0.6px;
+}
+
+.content .image {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.content .image img {
+    width:400px;
+    max-width: 400px;
+    position: relative;
+    right: -100px;
+    bottom: 80px;
+    transition: transform 0.3s ease, right 0.3s ease, bottom 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.4);
+    right: -120px;
+}
